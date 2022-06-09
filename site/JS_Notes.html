@@ -1,0 +1,63 @@
+<!doctype html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="JS_Notes.css">
+    <title>HTML Notes</title>
+    <!--to select class use .classname, and to select id use #id
+    can also call multiple 
+    ex. p, #bottom{} 
+        p.blue{}
+    child selector: article > p{}
+    descendant selector article p{}
+    the difference is the child has to be a direct child, but the descendant
+    just has to be a descendant, no matter how far.
+    selector:psuedo-class{}-->
+    <!--Use box-sizing: border-box; for you box sizing, and there is no
+    inheritance unless you use *{}, which selects every element.
+    overflow: auto; will hide the overflowed content of the box, but
+    allow a scroll bar to see the content.-->
+    <!--With positioning, floating moves the element out of the normal DOM
+    flow, relative keeps the element in the normal flow but moves a visual
+    representaion of the element. Absolut positioning needs to find a parent 
+    with a floating or relative element.-->
+</head>
+    <style>
+        p{
+            color:aliceblue;
+            background-color:black;
+        }
+        
+        /*Media query deals with the size of the browser window.
+        can use and or ,(or)*/
+        @media (min-width: 700px) and (max-width: 1000 px){
+            p{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a name="top">Top of page.</a>
+    <H1>Html Notes</H1>
+    <!--You can use the <a> tag to create links to other websites,
+        and like bellow you can even link to an id or name. Use the #
+    to call the id or name. target='_blank' attribute opens link in a
+        new window.-->
+    <a href='#bottom'>Bottom</a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <a href='#top'>Top</a>
+
+    <section id="bottom">Bottom of page.</section>
+</body>
+</html>

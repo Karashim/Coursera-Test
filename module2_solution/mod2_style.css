@@ -18,7 +18,7 @@ section{
     border: 1px solid black;
     background-color: tan;
     margin: 5px;
-    overflow:auto;
+    overflow:none;
 }
 p.fighterName{
 
@@ -26,10 +26,10 @@ p.fighterName{
     padding: 5px;
     background-color: white;
     border: 1px solid black;
-    width: 40%;
+    width: 45%;
     position: relative;
-    left:60.2%;
-    top: -17px;
+    left:55%;
+    top: -21px;
     font-size: 125%;
     
 }
