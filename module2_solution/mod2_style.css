@@ -1,0 +1,90 @@
+/*This applies to all elements, which includes the
+padding and border in their total width and height. */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(178, 177, 177);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    text-align: left;
+    padding: 5px;
+}
+section{
+    height: 300px;
+    border: 1px solid black;
+    background-color: tan;
+    margin: 5px;
+    overflow:auto;
+}
+p.fighterName{
+
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    width: 40%;
+    position: relative;
+    left:60.2%;
+    top: -17px;
+    font-size: 125%;
+    
+}
+img{
+    height: 200px;
+    width: 200px;
+    margin: 12px;
+    margin-right: 15px;
+    border: 1px solid black;
+    background-color: white;
+    float:left;
+}
+h3{
+    text-align: center;
+    margin: 50px;
+    font-size: 175%;
+}
+
+/*This media query is for the mobile version of a 
+browser and will apply the css rules below if the 
+browser width falls below 768px.*/
+@media(max-width: 767px){
+    section{
+        width:100%;
+        float: left;
+    }/*end section*/
+}/*end mobile media*/
+
+/*This media query is for the tablet version of a 
+browser and will apply the css rules below if the 
+browser width falls between 768px and 991px.*/
+@media(min-width: 768px) and (max-width: 991px){
+    section#wes, section#person, section#man{
+        float: left;
+
+    }/*end section*/
+
+    section#man{
+        width: 98%;
+    }
+    section#wes, section#person{
+        width: 48.5%;
+    }
+   
+
+
+}/*end tablet media*/
+
+/*This media query is for the desktop version of a 
+browser and will apply the css rules below if the 
+browser width falls under 992px.*/
+@media(min-width: 992px){
+    section{
+        width: 32%;
+        float: left;
+
+    }/*end section*/ 
+}/*end desktop media*/
