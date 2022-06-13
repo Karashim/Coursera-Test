@@ -122,3 +122,15 @@ function sayHello(){
 //These both add the onclick property to the button tag without it being in the html document.
 //Both change the .this object to point from the window to the button element.
 //can use this.textContent = "Text"; to change the value of the new this object.
+
+//Same as document.addEvenetListener("DOMContentLoaded...")
+// $(function () {
+
+//same as document.querySelector("#navbarToggle").addEventListener("bliur, ...")
+//     $("#navbarToggle").blur(function(){
+
+        
+
+//     });
+
+// });
