@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--This will make the browser consider the device width as the width
+    of the viewport with the initial scale being one, so it wont scale down.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="JS_Notes.css">
     <title>HTML Notes</title>
@@ -20,8 +22,14 @@
     allow a scroll bar to see the content.-->
     <!--With positioning, floating moves the element out of the normal DOM
     flow, relative keeps the element in the normal flow but moves a visual
-    representaion of the element. Absolut positioning needs to find a parent 
+    representaion of the element. Absolute positioning needs to find a parent 
     with a floating or relative element.-->
+    <!--Bootstrap grid must be inside a .container or .container-fluid classs
+    element, have a row class to create groups of columns and applies 
+    negative left/right margins. Columns match this structure: col-SIZE-SPAN,
+    where the size is the screen width range identifier and shows that columns
+    will colapse below that width unless another rule is applied. The span is
+    how many columns the element should span (1-12)-->
 </head>
     <style>
         p{
@@ -30,13 +38,19 @@
         }
         
         /*Media query deals with the size of the browser window.
-        can use and or ,(or)*/
+        can use and or ,(or)
+        This media query sets every p element's height and width
+        to 100px if the browser window falls within the range of
+        700px and 1000px.*/
         @media (min-width: 700px) and (max-width: 1000 px){
             p{
                 width: 100px;
                 height: 100px;
             }
         }
+
+
+
     </style>
 </head>
 <body>

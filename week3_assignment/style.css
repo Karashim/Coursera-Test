@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(177, 176, 176);
+    font-family: 'Times New Roman', Times, serif;
+}
+#header-nav{
+    background-color: rgb(136, 136, 246);
+    border-radius: 0;
+    border: 0;
+}
+h1{
+    float:left;
+    margin-top: -10px;
+    color:white;
+}
+h3{
+    font-size: 2em;
+}
+section{
+    height: 700px;
+    border: 1px solid black;
+    background-color: rgb(140, 156, 210);
+    margin: 5px;
+    overflow:none;
+}
+section > span{
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    width: 400px;
+    position: relative;
+    left:44%;
+    top: 3px;
+    font-size: 125%;
+}
+section > p{
+padding: 10px;
+}
+li{
+    background-color: black;
+    color:white;
+    font-weight: bold;
+}
+
+/*This media query is for the mobile version of a 
+browser and will apply the css rules below if the 
+browser width falls below 768px.*/
+@media(max-width: 767px){
+    section{
+        width:100%;
+        float: left;
+    }/*end section*/
+}/*end mobile media*/
+
+/*This media query is for the tablet version of a 
+browser and will apply the css rules below if the 
+browser width falls between 768px and 991px.*/
+@media(min-width: 768px) and (max-width: 991px){
+    section#chicken, section#beef, section#sushi{
+        float: left;
+
+    }/*end section*/
+
+    section#sushi{
+        width: 98%;
+    }
+    section#chicken, section#beef{
+        width: 48.5%;
+    }
+   
+
+
+}/*end tablet media*/
+
+/*This media query is for the desktop version of a 
+browser and will apply the css rules below if the 
+browser width falls under 992px.*/
+@media(min-width: 992px){
+    section{
+        width: 32%;
+        float: left;
+
+    }/*end section*/ 
+}/*end desktop media*/
