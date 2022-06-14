@@ -128,9 +128,38 @@ function sayHello(){
 
 //same as document.querySelector("#navbarToggle").addEventListener("bliur, ...")
 //     $("#navbarToggle").blur(function(){
-
-        
-
 //     });
-
 // });
+
+//Angular JS
+
+var student = {
+    name: "",
+    type: "student"
+};
+
+document.addEventListener("DOMContentLoaded", contentLoaded);
+
+function contentLoaded(event){
+    document.getElementById("stuName").addEventListener("keyup",keyup);
+}
+function keyup(event){
+    calulateNumericOutput();
+}
+
+//This function has low cohesion, because it get the name value,
+//calulculates the numeric output, and updats the output when it 
+//should only calculate the numeric output.
+function calulateNumericOutput(){
+    student.name = document.getElementById("stuName").value;
+
+    var totalNameValue = 0;
+    for (var i = 0; i < student.name.length; i++){
+        totalNameValue += student.name.charCodeAt(i);
+    }
+
+    var output = "Total numeric value of student's name is " + totalNameValue;
+    document.getElementById("output").innerText = output;
+
+}
+

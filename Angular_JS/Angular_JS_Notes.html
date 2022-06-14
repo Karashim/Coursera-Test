@@ -1,0 +1,60 @@
+<!-- ng-app is angular-app, and binds the angular app to this HTML-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="angularJS_script.js"></script>
+    <title>My First AngularJS App</title>
+</head>
+<body>
+<div ng-app="myFirstApp">
+    <h1>My first angularJS app</h1>
+    <div ng-controller="myFirstController">
+        {{name}}
+        <br>{{sayHello()}}
+        <!--The value of fruit is now bound to the $scope-->
+        <br><input type="text" 
+        ng-model="name"><br>
+            Inside my input is: {{name}}
+
+        <h1>Name Calculator</h1>
+                    <div>
+                        Your name:
+                        <input type="text" 
+                        ng-model="calcName"
+                        ng-keyup="displayNumeric()">
+                    </div>
+                    <div>Total numeric value of person's name is: 
+                        {{totalValue}}
+                    </div>
+
+        <h1>HTML5 Custom Attributes</h1>
+        <div id="target" greeting="hello">
+            <section>Section 1
+                <article>Article 1</article>
+            </section>
+        </div>
+        <script>
+            // var elem = document.getElementById('target');
+            // console.log(elem);
+            // console.log(elem.getAttribute('greeting'));
+
+            // var elem2 = document.querySelector("[greeting]");
+            // console.log(elem2);
+            // console.log(elem2.getAttribute(greeting));
+        </script>
+
+        <h1>Dependency Injection</h1>
+        <div>
+            <input type="text"
+            ng-model="name2"
+            ng-blur="upper()">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
