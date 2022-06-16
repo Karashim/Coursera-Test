@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>ShoppingListCheckOff</title>
+</head>
+<body ng-app="ShoppingListCheckOff">
+
+    <div ng-controller="ToBuyController as showList">
+        <h2>To Buy</h2>
+        <li ng-repeat="item in showList.items">
+            {{item.quantity}} of {{item.name}}
+            <button ng-click="showList.removeItem($index);">Bought</button>
+
+        </li>
+        <div ng-if="showList.items.length === 0">Everything is Bought</div>
+
+    </div>
+    <div ng-controller="AlreadyBoughtController as showList">
+        <h2>Already Bought</h2>
+
+        <li ng-repeat="item in showList.items">
+            {{item.quantity}} of {{item.name}}
+
+        </li>
+        <div ng-if="showList.items.length === 0">Nothing Bought Yet</div>
+
+    </div>
+    
+</body>
+</html>
